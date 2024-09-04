@@ -2,7 +2,7 @@
 
 ## Overview
 
-**CATCh V2** is an advanced chimera detection tool designed to provide robust and accurate detection of chimeric sequences in microbial community studies. It enhances the original CATCh ensemble classifier by integrating multiple chimera detection tools to deliver improved microbial diversity profiling.
+**CATCh V2** is an advanced chimera detection tool designed to provide robust and accurate detection of chimeric sequences in microbial community studies. It enhances the original CATCh ensemble classifier by integrating multiple chimera detection tools, including both de novo and reference-based approaches, to deliver improved microbial diversity profiling.
 
 ## Background
 
@@ -48,9 +48,26 @@ CATCh V2 improves performance over individual chimera detection tools, especiall
   - R: DADA2 package
   - Other tools: Perseus, UCHIME, Vsearch, ChimeraSlayer
 
-### Installation
+### Usage Instructions
 
-1. **Clone the Repository**: 
-   ```bash
-   git clone https://github.com/yourusername/CATCh-V2.git
-   cd CATCh-V2
+#### Step 1: Run the Notebook
+ * Open the Jupyter Notebook named `Final_Notebook_updd.ipynb`
+ * This notebook contains all the steps and code to execute the CATCh V2 pipeline.
+
+#### Step 2: Data Input
+* Prepare your microbial datasets according to the instructions in the methodology section.
+* Ensure that your data is correctly formatted for processing.
+
+#### Step 3: Run Chimera Detection Tools
+* Execute the following command in your terminal to run the chimera detection tools:
+* python merge.py <input_fasta> <input_count_table> <output_folder> scaler_and_model.joblib
+
+
+#### The `merge.py` script will:
+ * 1. Run different chimera detection tools on your specified mock dataset.
+ * 2. Combine the outputs from these tools into a unified format.
+ * 3. Feed the combined data into CATCh V2 for classification as chimeric or non-chimeric.
+
+#### Step 4: View Results
+* The output from the `merge.py` script will indicate the classification results.
+* Each sequence in the mock dataset will be labeled as either chimeric or non-chimeric.
