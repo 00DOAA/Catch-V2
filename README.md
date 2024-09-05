@@ -67,3 +67,15 @@ CATCh V2 improves performance over individual chimera detection tools, especiall
 #### Step 3: View Results
 * The output from the `merge.py` script will indicate the classification results.
 * Each sequence in the mock dataset will be labeled as either chimeric or non-chimeric.
+
+
+## References
+
+- Callahan BJ, McMurdie PJ, Rosen MJ, Han AW, Johnson AJ, Holmes SP. DADA2: High-resolution sample inference from Illumina amplicon data. *Nature Methods*. [Link](https://pubmed.ncbi.nlm.nih.gov/27214047/)
+- Edgar RC, Haas BJ, Clemente JC, Quince C, Knight R. UCHIME improves sensitivity and speed of chimera detection. *Bioinformatics (Oxford, England)*. [Link](https://pubmed.ncbi.nlm.nih.gov/21700674/)
+- Edgar RC. UNOISE2: Improved error-correction for Illumina 16S and its amplicon sequencing. *bioRxiv*. [Link](https://www.biorxiv.org/content/10.1101/081257v1)
+- Mysara M, Saeys Y, Leys N, Raes J, Monsieurs P. CATCh: An ensemble classifier for chimera detection in 16S rRNA sequencing studies. *Applied and Environmental Microbiology*. [Link](https://pubmed.ncbi.nlm.nih.gov/25527546/)
+- Quince C, Lanzen A, Davenport RJ, Turnbaugh PJ. Removing noise from pyrosequenced amplicons. *BMC Bioinformatics*. [Link](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-38)
+- Rognes T, Flouri T, Nichols B, Quince C, Mahé F. VSEARCH: A versatile open-source tool for metagenomics. *PeerJ*. [Link](https://peerj.com/articles/2584/)
+- Wright ES, Yilmaz LS, Noguera DR. DECIPHER: A search-based approach to chimera identification for 16S rRNA sequences. *Applied and Environmental Microbiology*. [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3264099/)
+
