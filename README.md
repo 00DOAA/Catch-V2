@@ -50,15 +50,11 @@ CATCh V2 improves performance over individual chimera detection tools, especiall
 
 ### Usage Instructions
 
-#### Step 1: Run the Notebook
- * Open the Jupyter Notebook named `Final_Notebook_updd.ipynb`
- * This notebook contains all the steps and code to execute the CATCh V2 pipeline.
-
-#### Step 2: Data Input
+#### Step 1: Data Input
 * Prepare your microbial datasets according to the instructions in the methodology section.
 * Ensure that your data is correctly formatted for processing.
 
-#### Step 3: Run Chimera Detection Tools
+#### Step 2: Run Chimera Detection Tools
 * Execute the following command in your terminal to run the chimera detection tools:
 * python merge.py <input_fasta> <input_count_table> <output_folder> scaler_and_model.joblib
 
@@ -68,6 +64,6 @@ CATCh V2 improves performance over individual chimera detection tools, especiall
  * 2. Combine the outputs from these tools into a unified format.
  * 3. Feed the combined data into CATCh V2 for classification as chimeric or non-chimeric.
 
-#### Step 4: View Results
+#### Step 3: View Results
 * The output from the `merge.py` script will indicate the classification results.
 * Each sequence in the mock dataset will be labeled as either chimeric or non-chimeric.
