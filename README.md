@@ -48,25 +48,56 @@ CATCh V2 improves performance over individual chimera detection tools, especiall
   - R: DADA2 package
   - Other tools: Perseus, UCHIME1, VSEARCH, ChimeraSlayer
 
-### Usage Instructions
+## Usage Instructions
 
-#### Step 1: Data Input
-* Prepare your microbial datasets according to the instructions in the methodology section.
-* Ensure that your data is correctly formatted for processing.
+To use **CATCh V2**, follow these steps:
 
-#### Step 2: Run Chimera Detection Tools
-* Execute the following command in your terminal to run the chimera detection tools:
-* python merge.py <input_fasta> <input_count_table> <output_folder> scaler_and_model.joblib
+### Set Up Your Directory
+
+1. **Create a main directory** on your computer.
+2. Inside the main directory, **create a subdirectory** for storing results (e.g., `output`).
+3. Download the following files from the repository and place them in the main directory:
+   - Mock FASTA file (e.g., `mock14.fasta`)
+   - Mock count table (e.g., `mock14.count_table`)
+   - `merge.py` script
+   - `scaler_and_model.joblib` file
+
+4. Additionally, download and install **Mothur** and the **SILVA.bacteria** reference files.
+
+### Run the Chimera Detection Tools
+
+1. Open your terminal and navigate to the main directory.
+2. Run the following command:
+
+    ```bash
+    python merge.py <input_fasta> <input_count_table> <output_folder> scaler_and_model.joblib
+    ```
+
+    **Example:**
+
+    ```bash
+    python merge.py mock14.fasta mock14.count_table output scaler_and_model.joblib
+    ```
+
+    This command will execute all the chimera detection tools on the input files and save the results to the specified output folder.
+
+### Example Output
+
+The output will be saved in the `output` folder. The chimera detection results for the mock dataset will be stored in a CSV file named `result.csv`. This file will include:
+
+- Predicted chimeric status for each sequence.
 
 
-#### The `merge.py` script will:
- * 1. Run different chimera detection tools on your specified mock dataset.
- * 2. Combine the outputs from these tools into a unified format.
- * 3. Feed the combined data into CATCh V2 for classification as chimeric or non-chimeric.
+#### Sample Output Format
 
-#### Step 3: View Results
-* The output from the `merge.py` script will indicate the classification results.
-* Each sequence in the mock dataset will be labeled as either chimeric or non-chimeric.
+| SequenceName | Chimeric       |
+|-------------|-----------------|
+| Sequence_1      | Non-chimeric    | 
+| Sequence_2      | Non-chimeric    | 
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 
 ## References
