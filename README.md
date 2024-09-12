@@ -8,7 +8,7 @@
 
 Microbial communities, including bacteria and archaea, play significant roles in ecosystems, human health, and industrial processes. The detection of chimeric sequences, which are artificial sequences generated during PCR amplification, remains a significant challenge in microbial community profiling. Chimeras can lead to inflated diversity estimates and incorrect identification of microbial taxa. 
 
-CATCh V2 leverages multiple detection tools — Perseus, UCHIME, Vsearch, ChimeraSlayer, UCHIME3, and DADA2 — combining their outputs using machine learning classifiers to provide a more comprehensive and reliable chimera detection system.
+CATCh V2 leverages multiple detection tools — Perseus, UCHIME1, Vsearch, ChimeraSlayer — combining their outputs using machine learning classifiers to provide a more comprehensive and reliable chimera detection system.
 
 ## Methodology
 
@@ -19,7 +19,7 @@ CATCh V2 leverages multiple detection tools — Perseus, UCHIME, Vsearch, Chimer
 
 ### Chimera Detection Tools
 
-- **Tools Used**: Perseus, UCHIME, Vsearch, ChimeraSlayer, UCHIME3, and DADA2.
+- **Tools Used**: Perseus, UCHIME1, Vsearch, ChimeraSlayer.
 - **Integration Strategy**: Outputs from these tools, including scores and decisions, were combined as input features for machine learning classifiers.
 
 ### Building the CATCh V2 Classifier
